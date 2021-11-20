@@ -1,0 +1,16 @@
+version: "3"
+
+services:
+  # demo
+  dev_ruby3:
+    # コンテナ名
+    container_name: dev_ruby3
+    # build
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    # コンテナの中に入る
+    tty: true
+    # 環境変数
+    environment:
+      TZ: "Asia/Tokyo"
